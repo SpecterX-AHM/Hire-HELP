@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate') -%>
+<h1 style='text-align : center; margin:50px 20px;'>Hire-HELP : Home</h1>
+
+<h5 style='text-align : center; margin:2% 10% 2% 10%;'>With a vision to end poverty, forced labour, worker's exploitation, and human trafficking, Hire HELP is working towards creating an ecosystem of inclusive economic growth for the unorganised workers. </h5>
+
+<p style='text-align : center; margin:2% 10% 2% 10%;'>Welcome to Hire HELP. We provide you the quickest way to check out skilled labours, workers, domestic help and other part-time workers near you. Hire HELP was established in 2015 to supply labourers, workers and tradespeople to the New York construction industry. Since then, we have grown significantly in size and in 2019, we included other divisions like domestic help, carpenters, electricians, plumbers, bricklayers, and general labourers. We provide a 24/7 service and a personal approach with all clients allocated their own specific account manager. We offer both temporary labour hire solutions and permanent recruitment services. Our Vision at Hire HELP is to supply quality labourers, blue-collared workers and tradespeople quickly and safely. Our Mission at Hire HELP is to provide a high quality of customer service to our clients and candidates alike. Since our establishment, Hire-HELP Group have built up a valuable database of strong candidates that we consistently keep in work by moving them from project to project. We understand the importance of looking after all our staff as we know that happy workers mean happy clients.</p>
+<div id="map"></div>
+
+<div class="blog-home2 spacer">
+  <div class="container">
+    <!-- Row  -->
+    <div class="row justify-content-center">
+      <!-- Column -->
+       <div class="col-md-10 text-center">
+        <h2 class="title">NEED A LABOURER, HELPER OR A TRADIE IN A HURRY?</h2>
+        <h5 class="subtitle">Check out our latest listings !</h5>
+       </div>
+      <!-- Column -->
+    </div>
+    <div class="row m-t-40">
+      <% recentPosts.forEach(post => { %>
+      <!-- Column -->
+      <div class="col-md-4">
+        <div class="card" data-aos="flip-left" data-aos-duration="1200">
+          <a href="/posts/<%= post.id %>"><img class="card-img-top" src="<%= post.images[0].url %>" alt="wrappixel kit"></a>
+          <div class="date-pos bg-info-gradiant"><%= moment(post._id).format('MMM') %><span><%= moment(post._id).format('D') %></span></div>
+          <h5 class="font-medium my-3"><a href="/posts/<%= post.id %>" class="link"><%= post.title %></a></h5>
+          <p class="my-1"><%= post.location %></p>    
+          <a href="/posts/<%= post.id %>" class="linking text-themecolor my-1">Learn More <i class="ti-arrow-right"></i></a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+<h3 style='text-align:center;margin-bottom:20px;'>Having a query? Ask it down below !</h3>
+<iframe width='570'height="400" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/ea9a657f-9550-4e46-8f06-9c58cecd7017" style='margin:0% 30% 3% 32%;'></iframe>
+
+<script>
+  mapboxgl.accessToken = "<%= mapBoxToken %>";
+  var posts = { features: <%- JSON.stringify(posts) %> };
+</script>
+<script src="/javascripts/allPostsClusterMap.js"></script>

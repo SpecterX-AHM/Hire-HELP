@@ -1,0 +1,38 @@
+<% layout('layouts/postIndex') -%>
+
+<div class="container-fluid p-5">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Search for Labours, Domestic Workers and Helpers nearby !</h1>
+		</div>
+		<div class="col-4">
+			<% include ../partials/searchFilter %>
+		</div>
+		<div class="col-8">
+			<div id="map"></div>
+		</div>
+	</div>
+
+	<% include ../partials/paginatePosts %>
+
+	<% posts.docs.forEach(function(post) { %>
+		<div>
+			<h2>Name : <%= post.title %></h2>
+			<div>Salary Requirements/hr : <%= post.price %></div>
+			<div>Occupation : <%= post.occupation %></div>
+			<div>Description : <%= post.description %></div>
+			<div>Address : <%= post.location %></div>
+			<div>Contact number : <%= post.phone %></div>
+			<div><a href="/posts/<%= post.id %>">View more</a></div>
+		</div>
+	<% }); %>
+
+	<% include ../partials/paginatePosts %>
+
+</div> <!-- /.container-fluid -->
+
+<script>
+	mapboxgl.accessToken = "<%= mapBoxToken %>";
+	var posts = { features: <%- JSON.stringify(posts.docs) %> };
+</script>
+<script src="/javascripts/allPostsClusterMap.js"></script>

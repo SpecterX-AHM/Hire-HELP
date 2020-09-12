@@ -1,0 +1,45 @@
+<% layout('layouts/boilerplate2') -%>
+<div style='margin:10% 10%; text-align:center;'>
+	<h1>Edit your Listing !</h1>
+	<form action="/posts/<%= post.id %>?_method=PUT" method="POST" id="postEditForm" enctype="multipart/form-data">
+		<div>
+			<label for="name">Edit your Name :</label>
+			<input type="text" id="name" name="post[title]" placeholder="Name">
+		</div>
+		<div>
+				<label for="occupation">Edit your occupation :</label>
+				<input type="text" id="occupation" name="post[occupation]" placeholder="occupation">
+		</div>
+		<div>
+				<label for="salary">Salary Requirement/hr in $ :</label>
+				<input type="number" id="salary"name="post[price]" step=".01" placeholder="Salary in $/hr">
+		</div>
+		<div>
+				<label for="image">Enter pictures(upto 4) :</label>
+				<input type="file" id="image" accept="images/*" name="images" multiple />
+			<div>
+			<% post.images.forEach(function(image, i) { %>
+				<img src="<%= image.url %>" width="100px" />
+				<label for="image<%= i %>">Delete?</label>
+				<input type="checkbox" name="deleteImages[]" class="imageDeleteCheckbox" id="image<%= i %>" value="<%= image.public_id %>">
+			<% }); %>
+			</div>
+		</div>
+		<div>
+				<label for="description">Tell us about yourself :</label>
+				<textarea name="post[description]" id="description" placeholder="Describe yourself"></textarea>
+		</div>
+		<div>
+				<label for="location">Edit your Address :</label>
+				<input type="text" name="post[location]" id="location" placeholder="Location">
+		</div>
+		<div>
+				<label for="phone">Edit your phone number :</label>
+				<input type="tel" id="phone" name="post[phone]" placeholder="telnum">
+		</div>
+		<input type="submit">
+		<input type="reset">
+	</form>
+</div>
+
+<script src="/javascripts/post-edit.js"></script>

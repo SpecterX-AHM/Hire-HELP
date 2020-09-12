@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate2') -%>
+
+<div style='margin:10% 10%;  text-align:center;'>
+	<form action="/register" method="POST" enctype="multipart/form-data" style='margin:30px 30px;'>
+		<div>
+			<h2>
+				Register yourself below !
+			</h2>
+			<label for="username" id="detail">Username :</label>
+			<input type="text" id="username" name="username" placeholder="username" value='<%= username %>'  required>
+		</div>
+		<div>
+			<label for="password" id="detail">Password :</label>
+			<input type="password" id="password" name="password" placeholder="password" required>
+		</div>
+		<div style='margin-left:35px;'>
+			<label for="email" id="detail">Email :</label>
+			<input type="email" id="email" name="email" placeholder="email"  value='<%= email %>' required>
+		</div>
+		<div style='margin-left:100px;'>
+			<label for="image" id="detail">Profile Image :</label>
+			<input type="file" id="image" name="image">
+		</div>
+
+		<input type="submit" id="detail">
+		<input type="reset" id="detail">
+	</form>
+</div>

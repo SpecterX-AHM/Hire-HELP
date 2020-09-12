@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate2') -%>
+
+<div style='margin:10% 10%;  text-align:center;'>
+	<form action="/login" method="POST" style='margin:20px 20px;'>
+		<div>
+			<h2 id="detail">
+				Login to access your account !
+			</h2>
+			<label for="username" id="detail">Username:</label>
+			<input type="text" id="username" name="username" placeholder="username" required>
+		</div>
+		<div>
+			<label for="password" id="detail">Password:</label>
+			<input type="password" id="password" name="password" placeholder="password" required>
+		</div>
+
+		<input type="submit" id="detail">
+		<input type="reset" id="detail">
+	</form>
+		<a href="/forgot-password" style='margin-right:150px;'>Forgot password ?</a>
+</div>
+
