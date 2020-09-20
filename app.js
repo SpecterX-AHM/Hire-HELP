@@ -24,7 +24,7 @@ const app = express();
 
 
 //Connect to the database
-mongoose.connect('mongodb+srv://Humayun:wordpass@cluster0.qv68j.mongodb.net/hirehelp?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Humayun:<yourpassword>@cluster0.qv68j.mongodb.net/hirehelp?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
