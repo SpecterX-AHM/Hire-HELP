@@ -5,14 +5,14 @@
 ## Installation
 
 ```sh
-$ npm install --save friends-cafe
+$ npm install --save hire-help
 ```
 
 ## Usage
 
 ```js
-var friendsCafe = require('friends-cafe');
-friendsCafe();
+var hireHelp = require('hire-help');
+hireHelp();
 ```
 
 ## License
