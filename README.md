@@ -12,7 +12,8 @@ $ cd hire-help
 
 ### 2.Install MongoDB
 
-Download it from here: https://docs.mongodb.com/manual/administration/install-community/
+Download it from here: https://docs.mongodb.com/manual/administration/install-community/  
+Create your own collection and add that in mongoose.connect()
 
 ### 3.Run Backend
 ```a
@@ -21,7 +22,11 @@ $ npm start
 ```
 
 ### 4.Run app on localhost 3000
-Create a app.listen function in app.js and run the app on https://localhost:3000
+Create an app.listen function in app.js and run the app on https://localhost:3000
+
+### 5.Api keys
+Make sure to add your own api keys of cloudinary and sendgrid.
+
 
 ## License
 
