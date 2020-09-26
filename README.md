@@ -1,9 +1,9 @@
 # Hire-HELP 
-> One stop solution to find all kinds of blue-collar labors and workers near you. A way to minimize a major issue prevalent in our society,i.e., unemployment.
+> One stop solution to find all kinds of blue-collar labors 👷 and workers near you. 🌄 A way to minimize a major issue prevalent in our society,i.e., unemployment. ✔
 
 ## Run Locally
 
-### 1.Clone repository
+### 1.Clone repository 
 
 ```sh
 $ git@github.com:SpectreX-AHM/Hire-HELP.git
@@ -29,4 +29,4 @@ Make sure to add your own api keys of cloudinary and sendgrid under API_KEY
 
 ## License
 
-MIT © [SpectreX-AHM](https://github.com/SpectreX-AHM)
+MIT © [SpectreX-AHM](https://github.com/SpectreX-AHM) 😊
