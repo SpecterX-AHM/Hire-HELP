@@ -27,7 +27,8 @@ Create an app.listen function in app.js and run the app on https://localhost:300
 ### 5.Api keys
 Make sure to add your own api keys of cloudinary and sendgrid under API_KEY
 
-### Map feature works on data of United States
+### Map feature works on data of United States  
+Add the details of cities in cities.js file
 
 ### Check out the deployed version 🤘
 https://hire-help.herokuapp.com/
