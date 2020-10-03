@@ -6,7 +6,7 @@
 ### 1.Clone repository 
 
 ```sh
-$ git@github.com:SpectreX-AHM/Hire-HELP.git
+$ git clone https://github.com/SpectreX-AHM/Hire-HELP.git
 $ cd hire-help
 ```
 
