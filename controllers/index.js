@@ -171,7 +171,7 @@ async putReset(req, res, next) {
     subject: 'Hire HELP - Password Changed',
     text: `Hello,
 	  	This email is to confirm that the password for your account has just been changed.
-	  	If you did not make this change, please hit reply and notify us at once.`.replace(/		  	/g, '')
+	  	If you did not make this change, please hit reply and notify us at once.`.replace(/		 {2}	/g, '')
   };
   
   await sgMail.send(msg);
